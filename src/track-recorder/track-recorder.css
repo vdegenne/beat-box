@@ -1,0 +1,31 @@
+:host {
+	--md-sys-color-primary: var(--md-sys-color-outline);
+	--md-ripple-hover-color: var(--md-sys-color-on-primary);
+	--md-ripple-pressed-color: var(--md-sys-color-on-primary);
+	--md-elevation-level: 3;
+	position: relative;
+	cursor: pointer;
+}
+:host([recording]) {
+	--md-sys-color-primary: var(--md-sys-color-error);
+	--md-sys-color-on-primary: var(--md-sys-color-on-error);
+}
+
+#background {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: var(--md-sys-color-primary);
+	pointer-events: none;
+}
+
+#container {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	min-height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--md-sys-color-on-primary);
+}
