@@ -5,11 +5,7 @@ import {withStyles} from 'lit-with-styles';
 import styles from './app-shell.css?inline';
 import {materialShellLoadingOff} from 'material-shell';
 import '../track-recorder/track-recorder.js';
-import {getAudioManager} from '../imports.js';
-import {type AudioManager} from '../audio-manager.js';
-
-let audioManager: AudioManager;
-getAudioManager().then((manager) => (audioManager = manager));
+import {audioManager} from '../audio-manager.js';
 
 @customElement('app-shell')
 @withStyles(styles)

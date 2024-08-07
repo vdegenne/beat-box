@@ -14,12 +14,11 @@ export class AudioManager extends ReactiveController {
 		this.tracks = [...this.tracks, track];
 	}
 
-	@confirm({
-		content: 'Are you sure to delete this track?',
-	})
 	removeTrack(track: Track) {
-		this.tracks.splice(this.tracks.indexOf(track) >>> 0, 1);
-		this.requestUpdate();
+		if (window.confirm('Are you sure to delete this track?')) {
+			this.tracks.splice(this.tracks.indexOf(track) >>> 0, 1);
+			this.requestUpdate();
+		}
 	}
 
 	stopAll() {
