@@ -18,7 +18,9 @@ export class TrackRecorder extends LitElement {
 			<md-elevation for="container"></md-elevation>
 			<md-ripple for="container"></md-ripple>
 			<div id="container" @click="${this.toggleRecording}">
-				<md-icon>${this.recording ? 'stop' : 'mic'}</md-icon>
+				${this.recording
+					? html`<md-icon fill>stop</md-icon>`
+					: html`<md-icon fill>mic</md-icon>`}
 			</div>
 		`;
 	}

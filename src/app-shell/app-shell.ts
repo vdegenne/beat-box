@@ -19,7 +19,7 @@ export class AppShell extends LitElement {
 		return html`
 			<header class="p-2">
 				<md-icon-button @click=${() => audioManager.playYall()}>
-					<md-icon>play_arrow</md-icon>
+					<md-icon fill>play_arrow</md-icon>
 				</md-icon-button>
 				<md-icon-button @click=${() => audioManager.stopAll()}>
 					<md-icon fill>stop</md-icon>
